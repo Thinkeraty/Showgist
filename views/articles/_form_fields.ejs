@@ -1,0 +1,89 @@
+<div class="form-group" style="font-size: 1.2rem; font-weight: 500;">
+  <label for="title">Image</label>
+  <input
+    required
+    value="<%= article.image %>"
+    type="text"
+    name="image"
+    id="image"
+    class="form-control"
+    style="height: 50px;"
+  />
+</div>
+<br />
+<div class="form-group" style="font-size: 1.2rem; font-weight: 500;">
+  <label for="title">Author</label>
+  <input
+    required
+    value="<%= article.author %>"
+    type="text"
+    name="author"
+    id="author"
+    class="form-control"
+    style="height: 50px;"
+  />
+</div>
+<br />
+<div class="form-group" style="font-size: 1.2rem; font-weight: 500;">
+  <label for="title">Title</label>
+  <input
+    required
+    value="<%= article.title %>"
+    type="text"
+    name="title"
+    id="title"
+    class="form-control"
+    style="height: 50px;"
+  />
+</div>
+<br />
+<div class="form-group" style="font-size: 1.2rem; font-weight: 500;">
+  <label for="description">Description</label>
+  <textarea
+    name="description"
+    id="description"
+    class="form-control"
+    style="height: 100px;"
+  >
+<%= article.description %></textarea
+  >
+</div>
+<br />
+<div class="form-group" style="font-size: 1.2rem; font-weight: 500;">
+  <label for="description">Category</label><br /><select
+    required
+    value="<%= article.category %>"
+    type="category"
+    name="category"
+    id="category"
+    class="form-control"
+    style="height: 50px;"
+    ><option>Movies</option
+    ><option>TV Series</option
+    ><option>Politics</option
+    ><option>News</option
+    ><option>Comics</option
+    ><option>Culture</option></select
+  ><br /><label for="markdown">Markdown</label>
+  <textarea
+    required
+    name="markdown"
+    id="markdown"
+    class="form-control"
+    style="height: 200px;"
+  >
+<%= article.markdown %></textarea
+  >
+</div>
+<br />
+<div class="form-group" style="font-size: 1.2rem; font-weight: 500;"></div>
+<br /><a href="/" class="btn btn-secondary" style="font-size: 1.2rem;"
+  >Cancel</a
+>
+&nbsp; &nbsp; &nbsp;<button
+  type="submit"
+  class="btn btn-primary"
+  style="font-size: 1.2rem;"
+>
+  Save</button
+><br /><br /><br />

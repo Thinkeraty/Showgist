@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/assets/showgist-half.png" sizes="128x128">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>ShowGist | New</title>
+	<link rel="stylesheet" href="../vendors/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="../vendors/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="../vendors/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="../vendors/linericon/style.css">
+	<link rel="stylesheet" href="../vendors/owl-carousel/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<header class="header_area" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container box_1620">
+					<!-- Brand and toggle get grouped for better mobile display --><a class="navbar-brand logo_h" href="/"><h1 class="page-heading">ShowGist</h1></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="icon-bar" style="background-color: black;"></span> <span class="icon-bar" style="background-color: black;"></span> <span class="icon-bar" style="background-color: black;"></span> </button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav justify-content-center">
+							<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="/contact">Contact</a>
+								<li class="nav-item"><a class="nav-link" href="/subscribe">Subscribe</a> </ul>
+						<ul class="nav navbar-nav navbar-right navbar-social" style="margin-right: 20px;">
+							<li><a href="https://www.facebook.com/theshowgist/"><i class="ti-facebook" style="font-size: 25px;"></i></a></li>
+							<li><a href="https://www.instagram.com/_task_failed_successfully_/"><i class="ti-instagram" style="font-size: 25px;"></i></a></li>
+						</ul>
+						<p class="h2" style="color: #139283; display: inline; white-space: nowrap; text-align: right; margin-right: -50px;">Blog By Samyak Jain</p>
+						<br>
+						<br> </div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<style>
+	.page-heading {
+		text-decoration: none;
+		display: inline-block;
+		color: black;
+		font-size: 3.4rem;
+		color: #139283;
+		margin-top: 10px;
+	}
+	/* add a empty string after the elment with class .page-heading */
+	
+	.page-heading:after {
+		color: black;
+		content: '';
+		display: block;
+		height: 5px;
+		width: 0;
+		background: transparent;
+		transition: width .5s ease, background-color .5s ease;
+		/* .5 seonds for changes to the width and background-color */
+		-webkit-transition: width .5s ease, background-color .5s ease;
+		/* Chrome and Safari */
+		-moz-transition: width .5s ease, background-color .5s ease;
+		/* FireFox */
+	}
+	/* Change the width and background on hover, aka sliding out */
+	
+	.page-heading:hover:after {
+		color: black;
+		width: 100%;
+		background: #1abc9c;
+	}
+	
+	.page-heading:hover:before {
+		color: black;
+		visibility: visible;
+		width: 100%;
+	}
+	
+	@media (min-width: 770px) {
+		.card-title {
+			font-size: 2.2rem;
+		}
+		#cardDescription {
+			font-size: 1.2rem;
+		}
+	}
+	
+	@media (max-width: 430px) {
+		.card-title {
+			font-size: 1.5rem;
+		}
+		#cardDescription {
+			font-size: 1rem;
+		}
+		.page-heading {
+			font-size: 2.5rem;
+		}
+	}
+	
+	@media (max-width: 335px) {
+		.page-heading {
+			font-size: 2.3rem;
+		}
+	}
+	</style>
+
+	<body>
+		<br>
+		<br>
+		<div class="container">
+			<h1 class="mb-4">New Article</h1>
+			<form action="/articles" method="POST">
+				<%- include('_form_fields') %>
+			</form>
+		</div>
+		<script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+		<script src="../vendors/bootstrap/bootstrap.bundle.min.js"></script>
+		<script src="../vendors/owl-carousel/owl.carousel.min.js"></script>
+		<script src="../js/jquery.ajaxchimp.min.js"></script>
+		<script src="../js/mail-script.js"></script>
+		<script src="../js/main.js"></script>
+	</body>
+
+</html>

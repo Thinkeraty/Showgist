@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>ShowGist</title>
+    <meta name="title" content="ShowGist" />
+    <meta
+      name="description"
+      content="A modern blog where an edgy teenager writes articles about his favorite stuff (mostly movies and tv shows) in his free time."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://showgist.herokuapp.com/" />
+    <meta property="og:title" content="ShowGist" />
+    <meta
+      property="og:description"
+      content="A modern blog where an edgy teenager writes articles about his favorite stuff (mostly movies and tv shows) in his free time."
+    />
+    <meta property="og:image" content="/assets/showgist-half.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://showgist.herokuapp.com/" />
+    <meta property="twitter:title" content="ShowGist" />
+    <meta
+      property="twitter:description"
+      content="A modern blog where an edgy teenager writes articles about his favorite stuff (mostly movies and tv shows) in his free time."
+    />
+    <meta property="twitter:image" content="/assets/showgist-half.png" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/showgist-half.png"
+      sizes="128x128"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- <script data-ad-client="ca-pub-3020002405038036" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-166813055-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-166813055-1");
+    </script>
+
+    <!-- <script src="https://propu.sh/pfe/current/tag.min.js?z=3360048" data-cfasync="false" async></script>
+<script async="async" data-cfasync="false" src="//upgulpinon.com/1?z=3360054"></script>
+<script type="text/javascript" src="//inpagepush.com/400/3360045" data-cfasync="false" async="async"></script> -->
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ShowGist</title>
+
+    <link rel="stylesheet" href="../vendors/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../vendors/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="../vendors/linericon/style.css" />
+    <link
+      rel="stylesheet"
+      href="../vendors/owl-carousel/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../vendors/owl-carousel/owl.carousel.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+
+    <header
+      class="header_area"
+      style="
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 5px 0 rgba(0, 0, 0, 0.19);
+      "
+    >
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="/"
+              ><h1 class="page-heading">ShowGist</h1></a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar" style="background-color: black;"></span>
+              <span class="icon-bar" style="background-color: black;"></span>
+              <span class="icon-bar" style="background-color: black;"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav justify-content-center">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/subscribe">Subscribe</a>
+                </li>
+              </ul>
+
+              <ul
+                class="nav navbar-nav navbar-right navbar-social"
+                style="margin-right: 20px;"
+              >
+                <li>
+                  <a href="https://www.facebook.com/theshowgist/"
+                    ><i class="ti-facebook" style="font-size: 25px;"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/_task_failed_successfully_/"
+                    ><i class="ti-instagram" style="font-size: 25px;"></i
+                  ></a>
+                </li>
+              </ul>
+              <p
+                class="h2"
+                style="
+                  color: #139283;
+                  display: inline;
+                  white-space: nowrap;
+                  text-align: right;
+                  margin-right: -50px;
+                "
+              >
+                Blog By Samyak Jain
+              </p>
+              <br />
+              <br />
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <style>
+      .page-heading {
+        text-decoration: none;
+        display: inline-block;
+        color: black;
+        font-size: 3.4rem;
+        color: #139283;
+      }
+
+      .page-heading:after {
+        color: black;
+        content: "";
+        display: block;
+        height: 5px;
+        width: 0;
+        background: transparent;
+        transition: width 0.5s ease, background-color 0.5s ease;
+        -webkit-transition: width 0.5s ease, background-color 0.5s ease;
+        -moz-transition: width 0.5s ease, background-color 0.5s ease;
+      }
+      .page-heading:hover:after {
+        color: black;
+        width: 100%;
+        background: #1abc9c;
+      }
+
+      .page-heading:hover:before {
+        color: black;
+        visibility: visible;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) and (max-width: 1020px) {
+        .card-title {
+          font-size: 2.2rem;
+        }
+
+        #cardDescription {
+          font-size: 1.2rem;
+        }
+
+        .share-whatsapp {
+          max-height: 40px;
+          height: auto;
+          max-width: 40px;
+          width: auto;
+        }
+
+        .share-btn-twitter {
+          margin-top: -32px;
+          margin-left: 150px;
+        }
+
+        .scroll {
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+          background: #189ab4;
+          background: #187bb4;
+          height: 60px;
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+          margin: 0 0 0 0;
+          cursor: pointer;
+          transition: 0.5s;
+          -moz-transition: 0.5s;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+        }
+      }
+
+      @media (max-width: 770px) {
+        .card-title {
+          font-size: 2.2rem;
+        }
+
+        #cardDescription {
+          font-size: 1.2rem;
+        }
+
+        .share-whatsapp {
+          max-height: 40px;
+          height: auto;
+          max-width: 40px;
+          width: auto;
+        }
+
+        .share-btn-twitter {
+          margin-top: -29px;
+          margin-left: 140px;
+        }
+      }
+
+      @media (max-width: 430px) {
+        .card-title {
+          font-size: 1.5rem;
+        }
+
+        #cardDescription {
+          font-size: 1rem;
+        }
+
+        .page-heading {
+          font-size: 2.5rem;
+        }
+
+        .share-whatsapp {
+          max-height: 30px;
+          height: auto;
+          max-width: 30px;
+          width: auto;
+        }
+
+        .share-btn-twitter {
+          margin-top: -28px;
+          margin-left: 140px;
+        }
+
+        #quickView {
+          display: none;
+        }
+
+        .scroll {
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+          background: #189ab4;
+          background: #187bb4;
+          padding: 20px;
+          height: 35px;
+          width: 35px;
+          padding: 7.5px 5px 5px 5px;
+          border-radius: 10px;
+          text-align: center;
+          margin: 0 0 0 0;
+          cursor: pointer;
+          transition: 0.5s;
+          -moz-transition: 0.5s;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+        }
+      }
+
+      @media (max-width: 335px) {
+        .page-heading {
+          font-size: 2.3rem;
+        }
+      }
+
+      @media (min-width: 1020px) {
+        .share-btn-twitter {
+          margin-top: -35px;
+          margin-left: 150px;
+        }
+        .card-title {
+          font-size: 2.2rem;
+        }
+
+        #cardDescription {
+          font-size: 1.2rem;
+        }
+
+        .share-whatsapp {
+          max-height: 40px;
+          height: auto;
+          max-width: 40px;
+          width: auto;
+        }
+
+        .share-btn-twitter {
+          margin-top: -37px;
+          margin-left: 150px;
+        }
+
+        .scroll {
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+          background: #189ab4;
+          background: #187bb4;
+          height: 60px;
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+          margin: 0 0 0 0;
+          cursor: pointer;
+          transition: 0.5s;
+          -moz-transition: 0.5s;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+        }
+      }
+
+      #articleSearchInput {
+        font-size: 16px;
+        padding: 12px 20px 0px 5px;
+        height: 50px;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 12px;
+
+        width: 90px;
+        -webkit-transition: width 0.3s ease-in-out;
+        transition: width 0.3s ease-in-out;
+      }
+
+      #articleSearchInput:focus {
+        width: 280px;
+        outline: none;
+      }
+
+      #articleSearchInput::placeholder {
+        font-size: 1.3rem;
+      }
+
+      .scrolltop {
+        display: none;
+        width: 100%;
+        margin: 0 auto;
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+      }
+
+      .scroll:hover {
+        background: #1abc9c;
+        transition: 0.3s;
+        -moz-transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+      }
+      .scroll:hover .fa {
+        padding-top: -10px;
+      }
+      .scroll .fa {
+        font-size: 30px;
+        margin-top: -5px;
+        margin-left: 1px;
+        transition: 0.5s;
+        -moz-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+      }
+    </style>
+
+    <br />
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <br />
+    <br />
+    <br />
+    <div class="container">
+      <div class="thetop" style="display: none;"></div>
+      <div class="testheight" style="display: none;">
+        <br /><br />
+        <i class="fa fa-4x fa-thumbs-up fa-spin" style="display: none;"></i>
+      </div>
+      <h2 class="mb-4" style="color: #10607a; font-size: 2.3rem;">
+        Latest Articles
+      </h2>
+      <input
+        type="text"
+        id="articleSearchInput"
+        placeholder="Search For Articles......"
+      /><i class="ti-search" style="margin-left: -20px;"></i>
+      <!--<a href="/articles/new" class="btn btn-success">New Article</a>-->
+      <div class="row">
+        <div class="col" style="margin-bottom: 30px;">
+          <% articles.forEach(article => { %>
+          <div class="card mt-4" style="max-width: 750px;" id="card">
+            <div class="card-body">
+              <a href="../articles/<%= article.slug %>"
+                ><img src="<%" ="article.image" % /> style="min-width: 0%;
+                height: 400px; max-width: 100%; width: auto; max-height: 400px;
+                height: auto; border-radius: 10px; " id="articleImage" alt="<%=
+                article.title %>" />
+              </a>
+              <br />
+              <br />
+              <p class="card-title" style="color: #0b6d97;">
+                <a href="../articles/<%= article.slug %>"
+                  ><%= article.title %></a
+                >
+              </p>
+              <div
+                class="card-subtitle text-muted mb-2"
+                style="font-size: 20px;"
+              >
+                <a
+                  href="/category/<%= article.categorySlug %>"
+                  style="color: #797979; text-decoration: underline;"
+                  ><%= article.category %></a
+                ><br />
+                By <%= article.author %>
+              </div>
+              <div
+                class="card-subtitle text-muted mb-2"
+                style="font-size: 20px;"
+              >
+                <span class="month" id="month"
+                  ><%= article.createdAt.getMonth(); %></span
+                >
+                <%= article.createdAt.getDate(); %>, <%=
+                article.createdAt.getFullYear(); %>
+              </div>
+              <div class="card-text mb-2" id="cardDescription">
+                <a
+                  href="../articles/<%= article.slug %>"
+                  class="card-text mb-2"
+                  style="color: #797979;"
+                  ><p style="white-space: pre-line;">
+                    <%= article.description %>
+                  </p></a
+                >
+              </div>
+              <br />
+              <a href="../articles/<%= article.slug %>" class="btn btn-primary"
+                >Read More</a
+              >&nbsp;<br />
+              <br />
+              <br />
+              <div class="share-btn">
+                <a
+                  href="whatsapp://send?text=Hey!%0aCheck Out This Article By ShowGist! %0a%0a<%= article.title %> %0a%0ahttps://showgist.herokuapp.com/articles/<%= article.slug %>"
+                  data-action="share/whatsapp/share"
+                  ><img
+                    src="https://i.ibb.co/BGdsTh3/whatsapp.png"
+                    class="share-whatsapp"
+                /></a>
+                &nbsp;&nbsp;&nbsp;
+                <div
+                  class="fb-share-button"
+                  data-href="https://showgist.herokuapp.com/articles/<%= article.slug %>"
+                  data-layout="button"
+                  data-size="large"
+                >
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+                    class="fb-xfbml-parse-ignore"
+                    >Share</a
+                  >
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <div class="share-btn-twitter">
+                  <a
+                    href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                    class="twitter-share-button"
+                    data-size="large"
+                    data-text="Hey! Check Out This Article By ShowGist!"
+                    data-url="https://showgist.herokuapp.com/articles/<%= article.slug %>"
+                    data-hashtags="showgist"
+                    data-lang="en"
+                    data-show-count="false"
+                    >Tweet</a
+                  >
+                  <script
+                    async
+                    src="https://platform.twitter.com/widgets.js"
+                    charset="utf-8"
+                  ></script>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="col" style="max-width: 300px;">
+          <br />
+          <div id="quickView">
+            <h2 style="font-size: 1.5rem;">Quick View</h2>
+            <br />
+            <% articles.forEach(article => { %>
+            <a href="../articles/<%= article.slug %>" style="font-size: 1rem;"
+              ><%= article.title %></a
+            ><br />
+            <span class="month" id="month"
+              ><%= article.createdAt.getMonth(); %></span
+            >
+            <%= article.createdAt.getDate(); %>, <%=
+            article.createdAt.getFullYear(); %> <br />
+            <br />
+            <% }) %>
+          </div>
+          <br />
+          <br />
+          <hr
+            style="
+              width: 90%;
+              margin: 0 auto;
+              height: 12px;
+              border-top: 1px solid #8c8b8b;
+            "
+          />
+          <br />
+          <h3
+            class="subscriptionh3"
+            style="font-size: 1.4rem; display: inline; white-space: nowrap;"
+          >
+            Don't Forget To Subscribe!
+          </h3>
+          <br />
+          <br />
+          <form
+            class="form-inline"
+            id="form"
+            style="margin: 0 auto;"
+            action="/articleUserSubscribed"
+            method="POST"
+          >
+            <div class="form-group" style="margin: 0 auto; text-align: center;">
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="email"
+                placeholder="Your Email..."
+                style="
+                  height: 50px;
+                  margin: 0 auto;
+                  margin-left: 0%;
+                  margin-right: 0%;
+                "
+                required
+              />&nbsp;&nbsp;&nbsp; <br />
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="button"
+                style="height: 50px;"
+              >
+                Subscribe!
+              </button>
+            </div>
+          </form>
+          <br />
+          <br />
+          <hr
+            style="
+              width: 90%;
+              margin: 0 auto;
+              height: 12px;
+              border-top: 1px solid #8c8b8b;
+            "
+          />
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span> <br />
+        <h3>You Subscription Has Been Confirmed!</h3>
+        <br />
+        <a href="/" style="text-decoration: underline; color: #139283;"
+          >Proceed</a
+        >
+      </div>
+    </div>
+    <div class="scrolltop">
+      <div class="scroll icon">
+        <i class="fa fa-4x fa-angle-up" style="color: #fff;"></i>
+      </div>
+    </div>
+    <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../js/mail-script.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      $("#articleSearchInput").keyup(function () {
+        var val = $.trim(this.value);
+        if (val === "") $("img").show();
+        else {
+          $("img").hide();
+          $("img[alt*=" + val + "]").show();
+        }
+      });
+      $(document).ready(function () {
+        $("#articleSearchInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#card *").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+      var monthCreatedAt = document.querySelectorAll(".month");
+      var months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      for (var i = 0; i < monthCreatedAt.length; i++) {
+        monthCreatedAt[i].innerHTML = months[monthCreatedAt[i].textContent];
+      }
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+          $(".scrolltop:hidden").stop(true, true).fadeIn();
+        } else {
+          $(".scrolltop").stop(true, true).fadeOut();
+        }
+      });
+      $(function () {
+        $(".scroll").click(function () {
+          $("html,body").animate(
+            { scrollTop: $(".thetop").offset().top },
+            "1000"
+          );
+          return false;
+        });
+      }) /* Your web app's Firebase configuration*/;
+      const firebaseConfig = {
+        apiKey: "AIzaSyDqWjirHDpVYbM63fyz1YKbsOnAQ5ynAhc",
+        authDomain: "samyak-personal.firebaseapp.com",
+        databaseURL: "https://samyak-personal.firebaseio.com",
+        projectId: "samyak-personal",
+        storageBucket: "samyak-personal.appspot.com",
+        messagingSenderId: "653889786069",
+        appId: "1:653889786069:web:14d374d33e41d2f2dcd25c",
+      };
+      /* Initialize Firebase*/ firebase.initializeApp(firebaseConfig);
+      var database = firebase.database();
+      var emailRef = database.ref("showgist/subs/emails");
+      var count;
+      var countRef = database.ref("showgist/subs/number");
+      countRef.on("value", function (data) {
+        count = data.val();
+      });
+      var modal = document.getElementById("myModal");
+      var closePopupBtn = document.getElementsByClassName("close")[0];
+      closePopupBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+      document.getElementById("form").addEventListener("submit", submitForm);
+      function getInputVal(id) {
+        return document.getElementById(id).value;
+      }
+      function submitForm(e) {
+        /* Get vals*/ var email = getInputVal("email");
+        saveEmail(email);
+        database.ref("showgist/subs/").update({ number: count + 1 });
+      }
+      function saveEmail(email) {
+        var newMailRef = emailRef.push();
+        newMailRef.set({ email: email });
+        modal.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

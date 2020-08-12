@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/showgist-half.png"
+      sizes="128x128"
+    />
+
+    <!-- Primary Meta Tags -->
+    <title>ShowGist | About</title>
+    <meta name="title" content="ShowGist" />
+    <meta
+      name="description"
+      content="A modern blog where an edgy teenager writes articles about his favorite stuff (mostly movies and tv shows) in his free time."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://showgist.herokuapp.com/about" />
+    <meta property="og:title" content="ShowGist" />
+    <meta
+      property="og:description"
+      content="A modern blog where an edgy teenager writes articles about his favorite stuff (mostly movies and tv shows) in his free time."
+    />
+    <meta property="og:image" content="/assets/showgist-half.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://showgist.herokuapp.com/about"
+    />
+    <meta property="twitter:title" content="ShowGist" />
+    <meta
+      property="twitter:description"
+      content="A modern blog where an edgy teenager writes articles about his favorite stuff (mostly movies and tv shows) in his free time."
+    />
+    <meta property="twitter:image" content="/assets/showgist-half.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ShowGist | About</title>
+
+    <link rel="stylesheet" href="../vendors/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../vendors/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="../vendors/linericon/style.css" />
+    <link
+      rel="stylesheet"
+      href="../vendors/owl-carousel/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../vendors/owl-carousel/owl.carousel.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <header
+      class="header_area"
+      style="
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 5px 0 rgba(0, 0, 0, 0.19);
+      "
+    >
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="/"
+              ><h1 class="page-heading">ShowGist</h1></a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar" style="background-color: black;"></span>
+              <span class="icon-bar" style="background-color: black;"></span>
+              <span class="icon-bar" style="background-color: black;"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/subscribe">Subscribe</a>
+                </li>
+              </ul>
+
+              <ul
+                class="nav navbar-nav navbar-right navbar-social"
+                style="margin-right: 20px;"
+              >
+                <li>
+                  <a href="https://www.facebook.com/theshowgist/"
+                    ><i class="ti-facebook" style="font-size: 25px;"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/_task_failed_successfully_/"
+                    ><i class="ti-instagram" style="font-size: 25px;"></i
+                  ></a>
+                </li>
+              </ul>
+              <p
+                class="h2"
+                style="
+                  color: #139283;
+                  display: inline;
+                  white-space: nowrap;
+                  text-align: right;
+                  margin-right: -50px;
+                "
+              >
+                Blog By Samyak Jain
+              </p>
+              <br />
+              <br />
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <style>
+      .page-heading {
+        text-decoration: none;
+        display: inline-block;
+        color: black;
+        font-size: 3.4rem;
+        color: #139283;
+        margin-top: 10px;
+      }
+      /* add a empty string after the elment with class .page-heading */
+      .page-heading:after {
+        color: black;
+        content: "";
+        display: block;
+        height: 5px;
+        width: 0;
+        background: transparent;
+        transition: width 0.5s ease, background-color 0.5s ease; /* .5 seonds for changes to the width and background-color */
+        -webkit-transition: width 0.5s ease, background-color 0.5s ease; /* Chrome and Safari */
+        -moz-transition: width 0.5s ease, background-color 0.5s ease; /* FireFox */
+      }
+      /* Change the width and background on hover, aka sliding out */
+      .page-heading:hover:after {
+        color: black;
+        width: 100%;
+        background: #1abc9c;
+      }
+
+      .page-heading:hover:before {
+        color: black;
+        visibility: visible;
+        width: 100%;
+      }
+
+      .img-facebook:hover {
+        color: #ff9907;
+        text-decoration: none;
+      }
+
+      .img-instagram:hover {
+        color: #ff9907;
+        text-decoration: none;
+      }
+
+      @media (min-width: 768px) {
+        .card-title {
+          font-size: 2.2rem;
+        }
+
+        #cardDescription {
+          font-size: 1.2rem;
+        }
+
+        .about {
+          text-align: justify;
+          color: #000;
+          font-size: 1.4rem;
+          margin: 0 auto;
+          text-align-last: center;
+        }
+
+        .samyak-img {
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+          border-radius: 800px;
+          max-width: 500px;
+          max-height: 500px;
+          width: auto;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 430px) {
+        .card-title {
+          font-size: 1.5rem;
+        }
+
+        #cardDescription {
+          font-size: 1rem;
+        }
+
+        .page-heading {
+          font-size: 2.2rem;
+        }
+
+        .samyak-img {
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+          border-radius: 800px;
+          max-width: 300px;
+          max-height: 300px;
+          width: auto;
+          height: auto;
+        }
+
+        .about {
+          text-align: justify;
+          color: #000;
+          font-size: 1.4rem;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        .img-facebook {
+          margin-bottom: 30px;
+        }
+      }
+
+      @media (max-width: 335px) {
+        .page-heading {
+          font-size: 2.3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h3
+      align="left"
+      style="vertical-align: top; text-align: center; font-size: 2rem;"
+    >
+      Hey There! I am Samyak.
+    </h3>
+    <br />
+    <br />
+    <img
+      src="https://i.ibb.co/vQPd9JP/IMG-20190330-WA0027-2.jpg"
+      class="samyak-img"
+    />
+    <br />
+    <br />
+    <h5
+      align="center"
+      class="about"
+      style="
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      "
+    >
+      My name is Samyak Jain.<br />
+      I am currently 14 years old.<br />
+      I live in New Delhi.<br /><br />
+      I started this blog with the name of Thinkeraty.<br />
+      It was a small blog.<br />
+      It did not do much and I closed it down after a while.<br /><br />
+      See, I always loved to code.....<br />
+      I first learnt HTML in my school's computer lab.<br />
+      I went beyond and learnt coding from the web.<br />
+      I learnt many different languages.<br />
+      And I am still learning!<br /><br />
+      Anyways, I started Thinkeraty once again, <br />
+      As a Web Development Firm. <br />
+      <br />
+      I always liked the idea of blogging.<br />
+      So, one day, I sat on my laptop and <br />
+      made this whole blog by coding.<br /><br />
+      Thus, I started the blog once again!<br />
+      And now, ShowGist is better than ever! <br /><br />
+      <br />
+      If you like me or my blog, then follow me on: <br /><br />
+      <ul>
+        <p style="display: inline;">
+          <strong>
+            <li>
+              <a href="https://www.facebook.com/theshowgist/"
+                ><i
+                  class="ti-facebook"
+                  style="font-size: 25px; color: #000;"
+                ></i
+                >&nbsp;&nbsp;Facebook</a
+              >&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.instagram.com/_task_failed_successfully_/"
+                ><i
+                  class="ti-instagram"
+                  style="font-size: 25px; color: #000;"
+                ></i
+                >&nbsp;&nbsp;Instagram</a
+              >
+            </li>
+          </strong>
+        </p>
+      </ul>
+      <br />
+    </h5>
+    <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../js/mail-script.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
