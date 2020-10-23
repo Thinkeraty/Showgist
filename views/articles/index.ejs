@@ -487,19 +487,7 @@
                 <br>
                 <br>
                 <div class="share-btn">
-                <a style="cursor: pointer;" data-action="share/whatsapp/share" onClick="(function(){
-                  $.ajax({
-                    type: 'HEAD',
-                    url: 'whatsapp://send?text=Hey!%0aCheck Out This Article By ShowGist! %0a%0a<%= article.title %> %0a%0ahttps://showgist.herokuapp.com/articles/<%= article.slug %>',
-                    success: function() {
-                      window.location='whatsapp://send?text=Hey!%0aCheck Out This Article By ShowGist! %0a%0a<%= article.title %> %0a%0ahttps://showgist.herokuapp.com/articles/<%= article.slug %>';   
-                    },
-                    error: function() {
-                      window.location='whatsapp://send?text=Hey!%0aCheck Out This Article By ShowGist! %0a%0a*<%= article.title %>*%0a%0ahttps://showgist.herokuapp.com/articles/<%= article.slug %>';
-                    }
-                  });
-                  return false;
-              })();return false;"><img src="https://i.ibb.co/BGdsTh3/whatsapp.png" class="share-whatsapp"></a> &nbsp;&nbsp;&nbsp;
+                <a href="https://api.whatsapp.com/send?text=Hey!%0aCheck Out This Article By ShowGist! %0a%0a<%= article.title %> %0a%0ahttps://showgist.herokuapp.com/articles/<%= article.slug %>" style="cursor: pointer;" data-action="share/whatsapp/share" ><img src="https://i.ibb.co/BGdsTh3/whatsapp.png" class="share-whatsapp"><img src="https://i.ibb.co/BGdsTh3/whatsapp.png" class="share-whatsapp"></a> &nbsp;&nbsp;&nbsp;
   
                 <div class="fb-share-button" data-href="https://showgist.herokuapp.com/articles/<%= article.slug %>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>&nbsp;&nbsp;&nbsp;
                 <div class="share-btn-twitter"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Hey! Check Out This Article By ShowGist!" data-url="https://showgist.herokuapp.com/articles/<%= article.slug %>" data-hashtags="showgist" data-lang="en" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div></div>
