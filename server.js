@@ -74,31 +74,31 @@ db.on("error", (e) => console.error(e)),
     r.render("articles/contact.handlebars", { layout: !1 });
   }),
   app.post("/sendMsg", (e, r) => {
-    let s = {
-      from: '"ShowGist" <mail.showgist@gmail.com>',
-      to: "samyak2986@gmail.com",
-      subject: "ShowGist Contact Request",
-      text: "Hello world?",
-      html: `\n    <p>You have a message from <a href="https://showgist.herokuapp.com">ShowGist</a><p>\n    <h3>Sender's Details</h3>\n    <br>\n    <ul>\n      <li>Name: ${e.body.name}</li>\n      <li>Company: ${e.body.company}</li>\n      <li>Email: ${e.body.email}</li>\n      <li>Phone Number: ${e.body.phone}</li>\n    </ul>\n    <br>\n    <h3>Message</h3>\n    <p>${e.body.message}</p>\n  `,
-    };
-    nodemailer
-      .createTransport({
-        service: "gmail",
-        auth: {
-          user: "mail.showgist@gmail.com",
-          pass: process.env.SHOWGIST_EMAIL_PSW,
-        },
-        tls: { rejectUnauthorized: !1 },
-      })
-      .sendMail(s, (e, s) => {
-        if (e) return console.log(e);
-        console.log("Message sent: %s", s.messageId),
-          console.log("Preview URL: %s", nodemailer.getTestMessageUrl(s)),
+    // let s = {
+    //   from: '"ShowGist" <mail.showgist@gmail.com>',
+    //   to: "samyak2986@gmail.com",
+    //   subject: "ShowGist Contact Request",
+    //   text: "Hello world?",
+    //   html: `\n    <p>You have a message from <a href="https://showgist.herokuapp.com">ShowGist</a><p>\n    <h3>Sender's Details</h3>\n    <br>\n    <ul>\n      <li>Name: ${e.body.name}</li>\n      <li>Company: ${e.body.company}</li>\n      <li>Email: ${e.body.email}</li>\n      <li>Phone Number: ${e.body.phone}</li>\n    </ul>\n    <br>\n    <h3>Message</h3>\n    <p>${e.body.message}</p>\n  `,
+    // };
+    // nodemailer
+    //   .createTransport({
+    //     service: "gmail",
+    //     auth: {
+    //       user: "mail.showgist@gmail.com",
+    //       pass: process.env.SHOWGIST_EMAIL_PSW,
+    //     },
+    //     tls: { rejectUnauthorized: !1 },
+    //   })
+      // .sendMail(s, (e, s) => {
+      //   if (e) return console.log(e);
+      //   console.log("Message sent: %s", s.messageId),
+      //     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(s)),
           r.render("articles/contact.handlebars", {
             layout: !1,
             msg: "Your message has been sent",
           });
-      });
+      // });
   }),
   app.get("/subscribe", (e, r) => {
     r.render("articles/subscription.handlebars", { layout: !1 });
